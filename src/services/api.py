@@ -30,4 +30,14 @@ def ask_bedrock(question: str, chat_id) -> AskBedrock:
             sql_query=None,
             sql_data=[]
         )
-    return AskBedrock(**response.json())
+    data = response.json()
+
+    if "message" in data:
+        return AskBedrock(
+            conversation_id=chat_id,
+            response=data["message"],
+            sql_query=None,
+            sql_data=[]
+        )
+
+    return AskBedrock(**data)
