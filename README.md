@@ -91,5 +91,4 @@ docker run --env-file .env -p 8501:8501 questar-streamlit
 ---
 
 ## Author
-
-Gustavo Ragazzi Amorim
+Leonardo Vilela Ribeiro
